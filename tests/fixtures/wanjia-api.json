@@ -1,0 +1,66 @@
+{
+  "Code": 200,
+  "Count": 4,
+  "Data": [
+    {
+      "Id": "910f441a-9b48-4eda-89d5-c50abc30006a",
+      "JobAdId": 311167214,
+      "JobAdName": "开发助理",
+      "Category": "校园招聘",
+      "Kind": "全职",
+      "LocNames": ["上海市"],
+      "Duty": "参与公司投研、量化、风控系统开发；参与 AI 能力建设并推动大模型、Agent 在业务场景落地。",
+      "Require": "硕士研究生及以上学历，熟悉 Python、SQL、PyTorch；有 LLM、RAG、Agent 实践经验者优先。",
+      "Degree": "硕士研究生",
+      "PostDate": "2026-07-31T10:10:14",
+      "EndTime": "2026-08-16T00:00:00",
+      "ChangeDate": "2026-07-31T10:10:14",
+      "Status": 1
+    },
+    {
+      "Id": "91f7076b-d196-43a0-a3af-0c6aee64ad0b",
+      "JobAdId": 311167211,
+      "JobAdName": "风控助理",
+      "Category": "校园招聘",
+      "Kind": "全职",
+      "LocNames": ["上海市"],
+      "Duty": "负责日常投资风险监控、投资风险与业绩分析，参与风控相关系统测试。",
+      "Require": "金融工程、统计学或数学专业优先，熟练使用 Python、SQL、R。",
+      "Degree": "硕士研究生",
+      "PostDate": "2026-07-31T10:09:55",
+      "EndTime": "2026-08-16T00:00:00",
+      "ChangeDate": "2026-07-31T10:09:55",
+      "Status": 1
+    },
+    {
+      "Id": "d974ee68-7398-4f91-aa59-0aea9f44d7e9",
+      "JobAdId": 311167202,
+      "JobAdName": "量化研究助理",
+      "Category": "校园招聘",
+      "Kind": "全职",
+      "LocNames": ["上海市"],
+      "Duty": "开发多因子选股、机器学习驱动的量化投资策略，参与资产配置和指数产品研究。",
+      "Require": "掌握 C++、Python、概率统计、时间序列、机器学习与多因子投资框架。",
+      "Degree": "硕士研究生",
+      "PostDate": "2026-07-31T10:03:09",
+      "EndTime": "2026-08-16T00:00:00",
+      "ChangeDate": "2026-07-31T10:03:09",
+      "Status": 1
+    },
+    {
+      "Id": "2da0a290-f5e7-43a8-92a8-33cfc793f413",
+      "JobAdId": 311167205,
+      "JobAdName": "机构销售助理",
+      "Category": "校园招聘",
+      "Kind": "全职",
+      "LocNames": ["上海市", "北京市"],
+      "Duty": "负责机构客户开发、维护、产品路演和交易协助。",
+      "Require": "金融、经济、营销、管理类专业优先。",
+      "Degree": "硕士研究生",
+      "PostDate": "2026-07-31T10:04:53",
+      "EndTime": "2026-08-16T00:00:00",
+      "ChangeDate": "2026-07-31T10:04:53",
+      "Status": 1
+    }
+  ]
+}

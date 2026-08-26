@@ -1,0 +1,102 @@
+% !TEX program = xelatex
+% template_c.tex — 模版 C（用户自用版式，源自其真实简历，2026-07 收编）
+% 参数化说明：
+%   1) 主题色：编译前把主题色令牌（definecolor 行中的占位）替换为 "R, G, B"（如 "0, 75, 135"；配合目标公司品牌色）
+%   2) 正文：把内容填在正文占位符处（写法见文末注释示例，与原简历完全一致）
+%   3) 照片：photo.jpg 放在编译目录；缺失时自动显示占位框（原版设计，保留）
+\documentclass[10pt, a4paper]{article}
+
+% ---------------------------------------------------------------------------
+% 基础包
+% ---------------------------------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+% ---------------------------------------------------------------------------
+% 字体设置（加了存在性兜底：Linux/Overleaf 用 Noto，Windows 自动落到微软雅黑）
+% ---------------------------------------------------------------------------
+\usepackage{fontspec}
+\usepackage[fontset=none]{ctex}
+
+\IfFontExistsTF{TeX Gyre Heros}{\setmainfont{TeX Gyre Heros}}{%
+  \IfFontExistsTF{Noto Sans CJK SC}{\setmainfont{Noto Sans CJK SC}}{\setmainfont{Microsoft YaHei}}}
+
+\IfFontExistsTF{Noto Sans CJK SC}{%
+  \setCJKmainfont[BoldFont = Noto Sans CJK SC Bold, ItalicFont = Noto Sans CJK SC,
+    AutoFakeBold = true]{Noto Sans CJK SC}%
+}{%
+  \setCJKmainfont[AutoFakeBold = true]{Microsoft YaHei}}
+
+% ---------------------------------------------------------------------------
+% 颜色与版式（主题色参数化：跟目标公司品牌色走）
+% ---------------------------------------------------------------------------
+\definecolor{CVAccent}{RGB}{ACCENT-RGB-TOKEN}
+
+\geometry{left=1.2cm, right=1.2cm, top=1.0cm, bottom=1.0cm}
+\linespread{1.15}
+\pagestyle{empty}
+
+% ---------------------------------------------------------------------------
+% 样式封装
+% ---------------------------------------------------------------------------
+\newcommand{\resumesection}[1]{
+    \vspace{0.2cm}
+    {\large \bfseries \color{CVAccent} #1}
+    \par
+    \vspace{0.1cm}
+    {\color{CVAccent} \hrule height 1pt}
+    \vspace{0.1cm}
+}
+
+\setlist[itemize]{
+    leftmargin=*,
+    label={\small\textcolor{CVAccent}{\textbullet}},
+    parsep=0pt,
+    itemsep=1.5pt,
+    topsep=1.5pt,
+    partopsep=0pt
+}
+
+% ---------------------------------------------------------------------------
+% 正文开始
+% ---------------------------------------------------------------------------
+\begin{document}
+
+@@BODY@@
+
+\end{document}
+
+% —— 正文写法示例（与原简历一致）——————————————————————
+% 头部：
+% \begin{minipage}[t]{0.72\textwidth}
+%     \vspace{-0.2cm}
+%     {\huge \bfseries \color{CVAccent} 姓名} \\[0.2cm]
+%     \small
+%     \textbf{电话：} xxx \quad \textbf{邮箱：} xxx \\
+%     \textbf{意向：} xxx \\
+%     \textbf{技术：} xxx
+% \end{minipage}%
+% \hfill
+% \begin{minipage}[t]{0.23\textwidth}
+%     \vspace{-0.6cm}
+%     \raggedleft
+%     \IfFileExists{photo.jpg}{
+%         \includegraphics[width=2.5cm, height=3.2cm, keepaspectratio]{photo.jpg}
+%     }{
+%         \fcolorbox{gray}{white}{\parbox[c][3.2cm][c]{2.5cm}{\centering \textcolor{gray}{照片}}}
+%     }
+% \end{minipage}
+% \vspace{-0.2cm}
+%
+% 区块：\resumesection{教育背景}
+% 条目（三段式抬头）：
+% \textbf{机构} \hfill \textit{部门 | 岗位} \hfill 2025.06 -- 2025.08
+% \begin{itemize}
+%     \item \textbf{粗体导语：} 内容……
+% \end{itemize}

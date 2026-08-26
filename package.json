@@ -1,0 +1,69 @@
+{
+  "name": "autumn-recruitment-assistant",
+  "version": "0.1.0",
+  "private": true,
+  "license": "0BSD",
+  "type": "module",
+  "scripts": {
+    "dev": "next dev --webpack -H 127.0.0.1",
+    "build": "next build --webpack",
+    "start": "next start -H 127.0.0.1",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "typecheck": "tsc --noEmit",
+    "privacy:audit": "tsx scripts/privacy-audit.ts",
+    "visual:qa": "tsx scripts/capture-ui.ts",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "collect": "tsx scripts/collect.ts",
+    "qqdocs:update": "tsx scripts/qqdocs-update.ts",
+    "qqdocs:replay": "tsx scripts/qqdocs-replay.ts",
+    "feed:publish": "tsx scripts/feed-publish.ts",
+    "feed:watch": "tsx scripts/feed-watch.ts"
+  },
+  "dependencies": {
+    "@radix-ui/react-dialog": "latest",
+    "better-sqlite3": "12.6.2",
+    "cheerio": "latest",
+    "clsx": "latest",
+    "docx": "^9.7.1",
+    "drizzle-orm": "latest",
+    "exceljs": "4.4.0",
+    "jszip": "3.10.1",
+    "lucide-react": "latest",
+    "mammoth": "^1.12.0",
+    "next": "16.3.0",
+    "react": "latest",
+    "react-dom": "latest",
+    "zod": "latest"
+  },
+  "devDependencies": {
+    "@playwright/test": "latest",
+    "@tailwindcss/postcss": "latest",
+    "@types/better-sqlite3": "latest",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "drizzle-kit": "latest",
+    "esbuild": "^0.28.2",
+    "eslint": "latest",
+    "eslint-config-next": "16.3.0",
+    "tailwindcss": "latest",
+    "tsx": "latest",
+    "typescript": "latest",
+    "vitest": "latest"
+  },
+  "overrides": {
+    "postcss": {
+      "nanoid": "3.3.18"
+    },
+    "@esbuild-kit/core-utils": {
+      "esbuild": "^0.25.0"
+    },
+    "exceljs": {
+      "uuid": "11.1.1"
+    }
+  }
+}

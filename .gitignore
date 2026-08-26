@@ -1,0 +1,37 @@
+node_modules/
+.next/
+out/
+coverage/
+playwright-report/
+test-results/
+artifacts/
+*.tsbuildinfo
+*.log
+.env
+.env.*
+!.env.example
+
+# User data must never enter the source repository.
+data/
+materials/
+applications/
+resumes/
+imports/
+backups/
+feed-outbox/
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+photo.jpg
+
+# Generated resume files and temporary office locks.
+*.pdf
+*.docx
+~$*
+
+# Keep intentionally public examples and fixture documents.
+!skills/resume-writer/assets/examples/*.docx
+!tests/fixtures/**/*.pdf
+!tests/fixtures/**/*.docx

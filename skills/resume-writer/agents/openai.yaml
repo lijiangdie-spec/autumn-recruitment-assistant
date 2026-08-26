@@ -1,0 +1,4 @@
+interface:
+  display_name: "秋招助手 · 简历撰写"
+  short_description: "基于真实素材库按岗位 JD 生成一页中文简历与匹配度说明"
+  default_prompt: "使用 $resume-writer 根据我提供的岗位 JD 和素材库生成一页定制中文简历。"

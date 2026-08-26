@@ -1,0 +1,49 @@
+% template_b.tex — 模版 B（双栏侧边：左窄栏放照片/联系/技能/奖项，右主栏放教育与经历）
+% 用法同模版 A：填正文占位符，xelatex 编译两遍，看日志 (1 page)。
+\documentclass[zihao=5]{ctexart}
+\usepackage[a4paper,top=1.4cm,bottom=1.3cm,left=1.5cm,right=1.5cm]{geometry}
+\usepackage{enumitem,graphicx,xcolor}
+\pagestyle{empty}
+% ctex 在 begin document 时把行距设为 1.3(偏松),在其后接管校准为 1.2(约合 15.6pt 行距,与 Word 版一致)
+\AtBeginDocument{\linespread{1.2}\selectfont}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1pt}
+\definecolor{rgray}{HTML}{595959}
+\definecolor{rfill}{HTML}{F2F2F2}
+\setlist[itemize]{leftmargin=1.1em,itemsep=1pt,topsep=1pt,parsep=0pt,partopsep=0pt,label=\textbullet}
+
+% —— 宏 ————————————————————————————————
+\newcommand{\rsection}[1]{\vspace{3pt}\noindent{\zihao{-4}\bfseries #1}\\[-0.85em]%
+  \noindent{\color{rgray}\rule{\linewidth}{0.5pt}}\vspace{1pt}\par}
+\newcommand{\rentry}[2]{\vspace{1pt}\noindent{\bfseries #1}\hfill{\color{rgray}#2}\par}
+\newcommand{\rsub}[1]{\noindent #1\par}
+% 侧栏小标题
+\newcommand{\rside}[1]{\vspace{6pt}\noindent{\bfseries #1}\\[-0.9em]%
+  \noindent{\color{rgray}\rule{\linewidth}{0.4pt}}\vspace{2pt}\par}
+% 双栏骨架：\rtwocol{侧栏内容}{主栏内容}
+\newcommand{\rtwocol}[2]{%
+  \noindent\colorbox{rfill}{\begin{minipage}[t]{0.27\linewidth}\vspace{4pt}\small #1\vspace{6pt}\end{minipage}}%
+  \hfill
+  \begin{minipage}[t]{0.68\linewidth}#2\end{minipage}}
+
+\begin{document}
+@@BODY@@
+\end{document}
+
+% —— BODY 填写示例 ————————————————————————
+% \rtwocol{%
+%   \begin{center}\includegraphics[width=0.75\linewidth]{photo.jpg}\end{center}
+%   \rside{联系方式}
+%   电话 138-0000-1234\par 邮箱 x@x.com\par 深圳\par
+%   \rside{专业技能}
+%   \textbf{语言与框架：}Java、Spring Boot\par
+%   \rside{荣誉奖项}
+%   蓝桥杯 Java 组省二等奖\par
+% }{%
+%   {\zihao{2}\bfseries 李明}\\[2pt]{\zihao{-4}\color{rgray}求职意向：后端开发实习生}\par
+%   \rsection{教育背景}
+%   \rentry{华南理工大学 · 软件工程（本科）}{2023.09 -- 2027.06}
+%   \rsection{实习经历}
+%   \rentry{星图信息科技 · 后端开发实习生}{2025.06 -- 2025.09}
+%   \begin{itemize}\item ……\end{itemize}
+% }

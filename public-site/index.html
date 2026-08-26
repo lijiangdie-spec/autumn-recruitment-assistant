@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="秋招助手公开岗位信息源">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self'; img-src 'self'; style-src 'self'; script-src 'self'; base-uri 'none'; form-action 'none'">
+  <title>秋招助手 · 公开岗位</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header><a class="brand" href="./">秋招助手</a><span>公开岗位信息源</span><a class="repo" href="https://github.com/PlumGinger/autumn-recruitment-assistant" rel="noreferrer">开源项目 ↗</a></header>
+  <main>
+    <section class="hero"><p>PUBLIC JOB FEED</p><h1>一份岗位源，<br>每个人有自己的作战台。</h1><div class="hero-meta"><span id="job-count">正在读取…</span><span id="updated-at">版本校验中</span></div></section>
+    <section class="toolbar"><label><span>搜索</span><input id="query" type="search" placeholder="公司、岗位、城市或 JD"></label><label><span>城市</span><select id="city"><option value="">全部城市</option></select></label><label><span>类型</span><select id="type"><option value="">全部类型</option><option value="campus">校招</option><option value="internship">实习</option><option value="unknown">待确认</option></select></label></section>
+    <section id="jobs" class="jobs" aria-live="polite"></section>
+    <p id="empty" class="empty" hidden>没有符合当前筛选的岗位。</p>
+    <button id="load-more" class="load-more" hidden>显示更多岗位</button>
+  </main>
+  <footer>岗位内容来自公开招聘信息。请以企业官方页面为准；本站不保存求职者资料。</footer>
+  <script src="app.js" defer></script>
+</body>
+</html>

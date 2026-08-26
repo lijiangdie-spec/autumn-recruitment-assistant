@@ -1,0 +1,9 @@
+{
+  "name": "resume-writer-skill",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "docx": "^9.0.2",
+    "mammoth": "^1.12.0"
+  }
+}
