@@ -30,7 +30,7 @@ flowchart LR
 Windows PowerShell：
 
 ```powershell
-git clone https://github.com/PlumGinger/autumn-recruitment-assistant.git
+git clone https://github.com/lijiangdie-spec/autumn-recruitment-assistant.git
 cd autumn-recruitment-assistant
 powershell -ExecutionPolicy Bypass -File scripts/setup.ps1
 npm run dev
@@ -39,7 +39,7 @@ npm run dev
 macOS：
 
 ```bash
-git clone https://github.com/PlumGinger/autumn-recruitment-assistant.git
+git clone https://github.com/lijiangdie-spec/autumn-recruitment-assistant.git
 cd autumn-recruitment-assistant
 bash scripts/setup.sh
 npm run dev
