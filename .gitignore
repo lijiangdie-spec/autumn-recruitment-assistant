@@ -12,13 +12,13 @@ artifacts/
 !.env.example
 
 # User data must never enter the source repository.
-data/
-materials/
-applications/
-resumes/
-imports/
-backups/
-feed-outbox/
+/data/
+/materials/
+/applications/
+/resumes/
+/imports/
+/backups/
+/feed-outbox/
 *.db
 *.db-shm
 *.db-wal
