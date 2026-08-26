@@ -1,4 +1,75 @@
-:root{font-family:Inter,"PingFang SC","Microsoft YaHei",sans-serif;color:#152033;background:#f5f7fb;line-height:1.5}*{box-sizing:border-box}body{margin:0}header{height:68px;display:flex;align-items:center;gap:18px;padding:0 max(24px,calc((100vw - 1180px)/2));border-bottom:1px solid #dfe5ee;background:#fff}header .brand{color:#1748c8;font-size:20px;font-weight:850;text-decoration:none}header span{color:#718096;font-size:13px}.repo{margin-left:auto;color:#334155;text-decoration:none}main{max-width:1180px;margin:auto;padding:60px 24px 90px}.hero{padding:54px;border-radius:24px;color:#fff;background:linear-gradient(125deg,#102b67,#2357d5 64%,#55a1ff);box-shadow:0 24px 70px #1d4ed833}.hero>p{margin:0;color:#bfd5ff;font-size:12px;font-weight:800;letter-spacing:.16em}.hero h1{margin:16px 0 30px;font-size:clamp(38px,6vw,68px);line-height:1.08;letter-spacing:-.04em}.hero-meta{display:flex;gap:28px;color:#dbe7ff}.toolbar{display:grid;grid-template-columns:2fr 1fr 1fr;gap:14px;margin:28px 0}.toolbar label{display:grid;gap:7px;color:#657185;font-size:12px;font-weight:750}.toolbar input,.toolbar select{height:46px;padding:0 14px;border:1px solid #d8e0eb;border-radius:10px;color:#152033;background:#fff;font:inherit}.jobs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.jobs article{display:flex;flex-direction:column;min-height:260px;padding:24px;border:1px solid #dfe5ee;border-radius:16px;background:#fff;box-shadow:0 12px 35px #24375d0a}.job-top{display:flex;justify-content:space-between;gap:16px}.job-top span{color:#2357d5;font-size:12px;font-weight:800}.job-top h2{margin:6px 0 0;font-size:20px}.job-top em{height:max-content;padding:5px 9px;border-radius:999px;color:#2f6f4e;background:#eaf8f0;font-size:11px;font-style:normal}.facts{color:#657185;font-size:13px}.jd{display:-webkit-box;overflow:hidden;margin:10px 0 20px;color:#3d4b62;font-size:13px;-webkit-line-clamp:4;-webkit-box-orient:vertical}.actions{display:flex;gap:9px;margin-top:auto}.actions a{padding:8px 12px;border:1px solid #cad5e4;border-radius:8px;color:#334155;text-decoration:none;font-size:13px;font-weight:700}.actions a.primary{border-color:#2357d5;color:#fff;background:#2357d5}.empty{text-align:center;color:#718096}footer{padding:28px;text-align:center;color:#718096;background:#fff;font-size:12px}@media(max-width:720px){main{padding-top:28px}.hero{padding:32px 24px}.toolbar,.jobs{grid-template-columns:1fr}.hero-meta{display:grid;gap:4px}}
-/* Long feeds are rendered in batches to keep the static page responsive. */
-.load-more { display: block; min-height: 44px; margin: 28px auto 0; padding: 0 22px; border: 1px solid #abc0e9; border-radius: 10px; color: #173b91; background: #eef4ff; font: inherit; font-weight: 750; cursor: pointer; }
+:root {
+  color: #202124;
+  background: #ffffff;
+  font-family: "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+  line-height: 1.5;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+
+.page-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 32px 24px 24px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.page-header h1 { margin: 0; font-size: 24px; line-height: 1.3; }
+.page-header p { margin: 7px 0 0; color: #6b7280; font-size: 13px; }
+.repo { color: #1557b0; font-size: 14px; text-decoration: none; white-space: nowrap; }
+.repo:hover { text-decoration: underline; }
+
+main { max-width: 1280px; min-height: 70vh; margin: 0 auto; padding: 0 24px 72px; }
+.toolbar { display: grid; grid-template-columns: minmax(260px, 1fr) 220px 160px; gap: 12px; padding: 20px 0; }
+.toolbar label { display: grid; gap: 6px; color: #6b7280; font-size: 12px; }
+.toolbar input, .toolbar select {
+  width: 100%; height: 40px; padding: 0 11px; border: 1px solid #d1d5db; border-radius: 4px;
+  color: #202124; background: #fff; font: inherit;
+}
+.toolbar input:focus, .toolbar select:focus, .load-more:focus, a:focus-visible { outline: 2px solid #1557b0; outline-offset: 2px; }
+
+.table-wrap { overflow-x: auto; border-top: 1px solid #d1d5db; }
+table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+caption { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+th { padding: 11px 12px; color: #6b7280; background: #f8f9fa; font-size: 12px; font-weight: 600; text-align: left; }
+td { padding: 15px 12px; border-bottom: 1px solid #e5e7eb; font-size: 14px; vertical-align: top; overflow-wrap: anywhere; }
+tbody tr:hover { background: #f8fbff; }
+th:nth-child(1) { width: 19%; }
+th:nth-child(2) { width: 31%; }
+th:nth-child(3) { width: 18%; }
+th:nth-child(4) { width: 10%; }
+th:nth-child(5) { width: 13%; }
+th:nth-child(6) { width: 9%; }
+.company { font-weight: 600; }
+.city, .deadline { color: #6b7280; }
+.type { color: #4b5563; }
+.action a { color: #1557b0; font-weight: 600; text-decoration: none; white-space: nowrap; }
+.action a:hover { text-decoration: underline; }
+.empty { margin: 36px 0; color: #6b7280; text-align: center; }
+.load-more { display: block; min-height: 40px; margin: 24px auto 0; padding: 0 16px; border: 1px solid #d1d5db; border-radius: 4px; color: #202124; background: #fff; font: inherit; cursor: pointer; }
+.load-more:hover { background: #f8f9fa; }
 .load-more[hidden] { display: none; }
+footer { padding: 24px; border-top: 1px solid #e5e7eb; color: #6b7280; font-size: 12px; text-align: center; }
+
+@media (max-width: 720px) {
+  .page-header { padding: 24px 16px 18px; }
+  .page-header h1 { font-size: 21px; }
+  main { padding: 0 16px 56px; }
+  .toolbar { grid-template-columns: 1fr; }
+  .table-wrap { overflow: visible; }
+  table, tbody { display: block; }
+  thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  tr { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 5px 16px; padding: 14px 0; border-bottom: 1px solid #e5e7eb; }
+  td { padding: 0; border: 0; font-size: 13px; }
+  .company { grid-column: 1; }
+  .title { grid-column: 1; font-size: 14px; }
+  .city { grid-column: 1; }
+  .type { grid-column: 2; grid-row: 1; text-align: right; }
+  .deadline { grid-column: 2; grid-row: 2; }
+  .action { grid-column: 2; grid-row: 3; text-align: right; }
+}
